@@ -1,0 +1,5574 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <script src="https://kit.fontawesome.com/5927b1869b.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <style>
+        .wrap {
+            height: 4000px;
+            background-color: #fff;
+            margin: 0 auto;
+            color: #fff;
+        }
+
+        .header {
+            width: 100%;
+            height: 5%;
+            background-color: #ffffff;
+            box-shadow: 0 0 3px rgb(173, 173, 173);
+            top: 0;
+            left: 0;
+            font-size: 16px;
+            position: fixed;
+            z-index: 100;
+        }
+
+        .contents1 {
+            width: 100%;
+            height: 25%;
+            background-color: #fff;
+        }
+
+        .nav {
+            width: 100%;
+            height: 10%;
+            background-color: #ffffff;
+        }
+
+        .contents2 {
+            width: 100%;
+            height: 40%;
+            background-color: #000000;
+        }
+
+        .contents3 {
+            width: 100%;
+            height: 15%;
+            background-color: #F3EEEA;
+        }
+
+        .nametag {
+            margin-left: 0.6em;
+            padding-top: 1em;
+            font-size: 3em;
+            color: #fff;
+            font-weight: bold;
+
+        }
+
+        .more {
+            color: #776B5D;
+            float: right;
+            margin-right: 4vw;
+            margin-top: 8vh;
+        }
+
+        .button1 {
+            width: 40px;
+            height: 160px;
+            background-color: #000000;
+            border-radius: 5% 0% 0% 5%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button2 {
+            width: 40px;
+            height: 160px;
+            background-color: #F4DFC8;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button3 {
+            width: 40px;
+            height: 160px;
+            background-color: #F4EAE0;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button4 {
+            width: 40px;
+            height: 160px;
+            background-color: #FAF6F0;
+            border-radius: 0% 5% 5% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button5 {
+            width: 40px;
+            height: 160px;
+            background-color: #860A35;
+            border-radius: 5% 0% 0% 5%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button6 {
+            width: 40px;
+            height: 160px;
+            background-color: #AF2655;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button7 {
+            width: 40px;
+            height: 160px;
+            background-color: #A3B763;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button8 {
+            width: 40px;
+            height: 160px;
+            background-color: #F3F3F3;
+            border-radius: 0% 5% 5% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button9 {
+            width: 40px;
+            height: 160px;
+            background-color: #83A2FF;
+            border-radius: 5% 0% 0% 5%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button10 {
+            width: 40px;
+            height: 160px;
+            background-color: #B4BDFF;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button11 {
+            width: 40px;
+            height: 160px;
+            background-color: #FFE3BB;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button12 {
+            width: 40px;
+            height: 160px;
+            background-color: #FFD28F;
+            border-radius: 0% 5% 5% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button13 {
+            width: 40px;
+            height: 160px;
+            background-color: #ECE3CE;
+            border-radius: 5% 0% 0% 5%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button14 {
+            width: 40px;
+            height: 160px;
+            background-color: #739072;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button15 {
+            width: 40px;
+            height: 160px;
+            background-color: #4F6F52;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button16 {
+            width: 40px;
+            height: 160px;
+            background-color: #3A4D39;
+            border-radius: 0% 5% 5% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button17 {
+            width: 40px;
+            height: 160px;
+            background-color: #F875AA;
+            border-radius: 5% 0% 0% 5%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button18 {
+            width: 40px;
+            height: 160px;
+            background-color: #FFDFDF;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button19 {
+            width: 40px;
+            height: 160px;
+            background-color: #FFF6F6;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button20 {
+            width: 40px;
+            height: 160px;
+            background-color: #AEDEFC;
+            border-radius: 0% 5% 5% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button21 {
+            width: 40px;
+            height: 160px;
+            background-color: #DADDB1;
+            border-radius: 5% 0% 0% 5%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button22 {
+            width: 40px;
+            height: 160px;
+            background-color: #B3A492;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button23 {
+            width: 40px;
+            height: 160px;
+            background-color: #BFB29E;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button24 {
+            width: 40px;
+            height: 160px;
+            background-color: #D6C7AE;
+            border-radius: 0% 5% 5% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button25 {
+            width: 40px;
+            height: 160px;
+            background-color: #EEF5FF;
+            border-radius: 5% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button26 {
+            width: 40px;
+            height: 160px;
+            background-color: #9EB8D9;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button27 {
+            width: 40px;
+            height: 160px;
+            background-color: #7C93C3;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button28 {
+            width: 40px;
+            height: 160px;
+            background-color: #A25772;
+            border-radius: 0% 5% 5% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button29 {
+            width: 40px;
+            height: 160px;
+            background-color: #0766AD;
+            border-radius: 5% 0% 0% 5%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button30 {
+            width: 40px;
+            height: 160px;
+            background-color: #29ADB2;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button31 {
+            width: 40px;
+            height: 160px;
+            background-color: #C5E898;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button32 {
+            width: 40px;
+            height: 160px;
+            background-color: #F3F3F3;
+            border-radius: 0% 5% 5% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button33 {
+            width: 40px;
+            height: 160px;
+            background-color: #7071E8;
+            border-radius: 5% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button34 {
+            width: 40px;
+            height: 160px;
+            background-color: #C683D7;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button35 {
+            width: 40px;
+            height: 160px;
+            background-color: #ED9ED6;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button36 {
+            width: 40px;
+            height: 160px;
+            background-color: #FFC7C7;
+            border-radius: 0% 5% 5% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button37 {
+            width: 40px;
+            height: 160px;
+            background-color: #FF8F8F;
+            border-radius: 5% 0% 0% 5%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button38 {
+            width: 40px;
+            height: 160px;
+            background-color: #EEF296;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button39 {
+            width: 40px;
+            height: 160px;
+            background-color: #9ADE7B;
+            border-radius: 0% 0% 0% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .button40 {
+            width: 40px;
+            height: 160px;
+            background-color: #508D69;
+            border-radius: 0% 5% 5% 0%;
+            border: unset;
+            float: left;
+            transition: all 0.6s;
+        }
+
+        .hotcolor {
+            margin-top: 8vh;
+        }
+
+        .snum {
+            writing-mode: vertical-lr;
+        }
+
+        .button1:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button2:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button3:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button4:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button5:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button6:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button7:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button8:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button9:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button10:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button11:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button12:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button13:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button14:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button15:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button16:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button17:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button18:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button19:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button20:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button21:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button22:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button23:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button24:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button25:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button26:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button27:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button28:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button29:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button30:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button31:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button32:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button33:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button34:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button35:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button36:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button37:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button38:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button39:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .button40:hover {
+            color: white;
+            background-color: #777;
+            content: "#000000";
+            cursor: pointer;
+            box-shadow: 3px 3px #999;
+            opacity: 1;
+        }
+
+        .like_1:active {
+            color: red;
+        }
+
+        a {
+            text-decoration-line: none;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+        .heart-btn {
+            position: absolute;
+            margin-left: 2.5em;
+
+        }
+
+        .content {
+            padding: 3px 10px;
+            display: flex;
+            border: 1px solid #999;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #FFF6F6;
+        }
+
+        .content.heart-active {
+            border-color: #f9b9c4;
+            background: #fbd0d8;
+        }
+
+        .heart {
+            position: absolute;
+            background: url("https://i.postimg.cc/MTqBFc7H/png-6.png") no-repeat;
+            background-position: left;
+            background-size: 2900%;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text {
+            font-size: 10px;
+            margin-left: 20px;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .numb:before {
+            content: '32';
+            font-size: 15px;
+            margin-left: 2px;
+            font-weight: 600;
+            color: #999;
+        }
+
+        .numb.heart-active:before {
+            content: '33';
+            color: #000;
+        }
+
+        .text.heart-active {
+            color: #000;
+        }
+
+        .heart.heart-active {
+            animation: animate .8s steps(28) 1;
+            background-position: right;
+        }
+
+        @keyframes animate {
+            0% {
+                background-position: left;
+            }
+
+            100% {
+                background-position: right;
+            }
+        }
+
+
+        .heart-btn2 {
+            position: absolute;
+            margin-left: 15em;
+
+        }
+
+        .content2 {
+            padding: 3px 10px;
+            display: flex;
+            border: 1px solid #999;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #FFF6F6;
+        }
+
+        .content2.heart-active2 {
+            border-color: #f9b9c4;
+            background: #fbd0d8;
+        }
+
+        .heart2 {
+            position: absolute;
+            background: url("https://i.postimg.cc/MTqBFc7H/png-6.png") no-repeat;
+            background-position: left;
+            background-size: 2900%;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text2 {
+            font-size: 10px;
+            margin-left: 20px;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .numb2:before {
+            content: '16';
+            font-size: 15px;
+            margin-left: 2px;
+            font-weight: 600;
+            color: #999;
+        }
+
+        .numb2.heart-active2:before {
+            content: '17';
+            color: #000;
+        }
+
+        .text2.heart-active2 {
+            color: #000;
+        }
+
+        .heart2.heart-active2 {
+            animation: animate .8s steps(28) 1;
+            background-position: right;
+        }
+
+        .heart-btn3 {
+            position: absolute;
+            margin-left: 27.5em;
+
+        }
+
+        .content3 {
+            padding: 3px 10px;
+            display: flex;
+            border: 1px solid #999;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #FFF6F6;
+        }
+
+        .content3.heart-active3 {
+            border-color: #f9b9c4;
+            background: #fbd0d8;
+        }
+
+        .heart3 {
+            position: absolute;
+            background: url("https://i.postimg.cc/MTqBFc7H/png-6.png") no-repeat;
+            background-position: left;
+            background-size: 2900%;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text3 {
+            font-size: 10px;
+            margin-left: 20px;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .numb3:before {
+            content: '14';
+            font-size: 15px;
+            margin-left: 2px;
+            font-weight: 600;
+            color: #999;
+        }
+
+        .numb3.heart-active3:before {
+            content: '15';
+            color: #000;
+        }
+
+        .text3.heart-active3 {
+            color: #000;
+        }
+
+        .heart3.heart-active3 {
+            animation: animate .8s steps(28) 1;
+            background-position: right;
+        }
+
+        .heart-btn4 {
+            position: absolute;
+            margin-left: 40em;
+
+        }
+
+        .content4 {
+            padding: 3px 10px;
+            display: flex;
+            border: 1px solid #999;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #FFF6F6;
+        }
+
+        .content4.heart-active4 {
+            border-color: #f9b9c4;
+            background: #fbd0d8;
+        }
+
+        .heart4 {
+            position: absolute;
+            background: url("https://i.postimg.cc/MTqBFc7H/png-6.png") no-repeat;
+            background-position: left;
+            background-size: 2900%;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text4 {
+            font-size: 10px;
+            margin-left: 20px;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .numb4:before {
+            content: '11';
+            font-size: 15px;
+            margin-left: 2px;
+            font-weight: 600;
+            color: #999;
+        }
+
+        .numb4.heart-active4:before {
+            content: '12';
+            color: #000;
+        }
+
+        .text4.heart-active4 {
+            color: #000;
+        }
+
+        .heart4.heart-active4 {
+            animation: animate .8s steps(28) 1;
+            background-position: right;
+        }
+
+        .heart-btn5 {
+            position: absolute;
+            margin-left: 52.5em;
+
+        }
+
+        .content5 {
+            padding: 3px 10px;
+            display: flex;
+            border: 1px solid #999;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #FFF6F6;
+        }
+
+        .content5.heart-active5 {
+            border-color: #f9b9c4;
+            background: #fbd0d8;
+        }
+
+        .heart5 {
+            position: absolute;
+            background: url("https://i.postimg.cc/MTqBFc7H/png-6.png") no-repeat;
+            background-position: left;
+            background-size: 2900%;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text5 {
+            font-size: 10px;
+            margin-left: 20px;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .numb5:before {
+            content: '7';
+            font-size: 15px;
+            margin-left: 2px;
+            font-weight: 600;
+            color: #999;
+        }
+
+        .numb5.heart-active5:before {
+            content: '8';
+            color: #000;
+        }
+
+        .text5.heart-active5 {
+            color: #000;
+        }
+
+        .heart5.heart-active5 {
+            animation: animate .8s steps(28) 1;
+            background-position: right;
+        }
+
+        .heart-btn6 {
+            position: absolute;
+            margin-left: 65em;
+
+        }
+
+        .content6 {
+            padding: 3px 10px;
+            display: flex;
+            border: 1px solid #999;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #FFF6F6;
+        }
+
+        .content6.heart-active6 {
+            border-color: #f9b9c4;
+            background: #fbd0d8;
+        }
+
+        .heart6 {
+            position: absolute;
+            background: url("https://i.postimg.cc/MTqBFc7H/png-6.png") no-repeat;
+            background-position: left;
+            background-size: 2900%;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text6 {
+            font-size: 10px;
+            margin-left: 20px;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .numb6:before {
+            content: '5';
+            font-size: 15px;
+            margin-left: 2px;
+            font-weight: 600;
+            color: #999;
+        }
+
+        .numb6.heart-active6:before {
+            content: '6';
+            color: #000;
+        }
+
+        .text6.heart-active6 {
+            color: #000;
+        }
+
+        .heart6.heart-active6 {
+            animation: animate .8s steps(28) 1;
+            background-position: right;
+        }
+
+        .heart-btn7 {
+            position: absolute;
+            margin-left: 77.5em;
+
+        }
+
+        .content7 {
+            padding: 3px 10px;
+            display: flex;
+            border: 1px solid #999;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #FFF6F6;
+        }
+
+        .content7.heart-active7 {
+            border-color: #f9b9c4;
+            background: #fbd0d8;
+        }
+
+        .heart7 {
+            position: absolute;
+            background: url("https://i.postimg.cc/MTqBFc7H/png-6.png") no-repeat;
+            background-position: left;
+            background-size: 2900%;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text7 {
+            font-size: 10px;
+            margin-left: 20px;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .numb7:before {
+            content: '4';
+            font-size: 15px;
+            margin-left: 2px;
+            font-weight: 600;
+            color: #999;
+        }
+
+        .numb7.heart-active7:before {
+            content: '5';
+            color: #000;
+        }
+
+        .text7.heart-active7 {
+            color: #000;
+        }
+
+        .heart7.heart-active7 {
+            animation: animate .8s steps(28) 1;
+            background-position: right;
+        }
+
+        .heart-btn8 {
+            position: absolute;
+            margin-left: 90em;
+
+        }
+
+        .content8 {
+            padding: 3px 10px;
+            display: flex;
+            border: 1px solid #999;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #FFF6F6;
+        }
+
+        .content8.heart-active8 {
+            border-color: #f9b9c4;
+            background: #fbd0d8;
+        }
+
+        .heart8 {
+            position: absolute;
+            background: url("https://i.postimg.cc/MTqBFc7H/png-6.png") no-repeat;
+            background-position: left;
+            background-size: 2900%;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text8 {
+            font-size: 10px;
+            margin-left: 20px;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .numb8:before {
+            content: '4';
+            font-size: 15px;
+            margin-left: 2px;
+            font-weight: 600;
+            color: #999;
+        }
+
+        .numb8.heart-active8:before {
+            content: '5';
+            color: #000;
+        }
+
+        .text8.heart-active8 {
+            color: #000;
+        }
+
+        .heart8.heart-active8 {
+            animation: animate .8s steps(28) 1;
+            background-position: right;
+        }
+
+        .heart-btn8 {
+            position: absolute;
+            margin-left: 90em;
+
+        }
+
+        .content8 {
+            padding: 3px 10px;
+            display: flex;
+            border: 1px solid #999;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #FFF6F6;
+        }
+
+        .content8.heart-active8 {
+            border-color: #f9b9c4;
+            background: #fbd0d8;
+        }
+
+        .heart8 {
+            position: absolute;
+            background: url("https://i.postimg.cc/MTqBFc7H/png-6.png") no-repeat;
+            background-position: left;
+            background-size: 2900%;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text8 {
+            font-size: 10px;
+            margin-left: 20px;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .numb8:before {
+            content: '4';
+            font-size: 15px;
+            margin-left: 2px;
+            font-weight: 600;
+            color: #999;
+        }
+
+        .numb8.heart-active8:before {
+            content: '5';
+            color: #000;
+        }
+
+        .text8.heart-active8 {
+            color: #000;
+        }
+
+        .heart8.heart-active8 {
+            animation: animate .8s steps(28) 1;
+            background-position: right;
+        }
+
+        .heart-btn9 {
+            position: absolute;
+            margin-left: 102.5em;
+
+        }
+
+        .content9 {
+            padding: 3px 10px;
+            display: flex;
+            border: 1px solid #999;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #FFF6F6;
+        }
+
+        .content9.heart-active9 {
+            border-color: #f9b9c4;
+            background: #fbd0d8;
+        }
+
+        .heart9 {
+            position: absolute;
+            background: url("https://i.postimg.cc/MTqBFc7H/png-6.png") no-repeat;
+            background-position: left;
+            background-size: 2900%;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text9 {
+            font-size: 10px;
+            margin-left: 20px;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .numb9:before {
+            content: '2';
+            font-size: 15px;
+            margin-left: 2px;
+            font-weight: 600;
+            color: #999;
+        }
+
+        .numb9.heart-active9:before {
+            content: '3';
+            color: #000;
+        }
+
+        .text9.heart-active9 {
+            color: #000;
+        }
+
+        .heart9.heart-active9 {
+            animation: animate .8s steps(28) 1;
+            background-position: right;
+        }
+
+        .heart-btn10 {
+            position: absolute;
+            margin-left: 115em;
+
+        }
+
+        .content10 {
+            padding: 3px 10px;
+            display: flex;
+            border: 1px solid #999;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #FFF6F6;
+        }
+
+        .content10.heart-active10 {
+            border-color: #f9b9c4;
+            background: #fbd0d8;
+        }
+
+        .heart10 {
+            position: absolute;
+            background: url("https://i.postimg.cc/MTqBFc7H/png-6.png") no-repeat;
+            background-position: left;
+            background-size: 2900%;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text10 {
+            font-size: 10px;
+            margin-left: 20px;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .numb10:before {
+            content: '2';
+            font-size: 15px;
+            margin-left: 2px;
+            font-weight: 600;
+            color: #999;
+        }
+
+        .numb10.heart-active10:before {
+            content: '3';
+            color: #000;
+        }
+
+        .text10.heart-active10 {
+            color: #000;
+        }
+
+        .heart10.heart-active10 {
+            animation: animate .8s steps(28) 1;
+            background-position: right;
+        }
+
+        /*미디어쿼리*/
+        @media (max-width: 1920px) {
+            .main1 {
+                display: none;
+            }
+            .exit {
+                display: none;
+            }
+        }
+        @media (max-width: 1550px) {
+            .main1 {
+                display: flex;
+            }
+            .exit {
+                display: flex;
+            }
+        }
+        @media (max-width: 4000px) {
+            .hotcoor_10 {
+                display: none;
+            }
+        }
+
+        /*pc*/
+        @media (max-width: 1920px) {
+            .hotcoor_10 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1814px) {
+            .hotcoor_9 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1632px) {
+            .hotcoor_8 {
+                display: none;
+            }
+
+            .heart-btn8 {
+                display: none;
+            }
+
+            .hotcoor_9 {
+                display: none;
+            }
+
+            .heart-btn9 {
+                display: none;
+            }
+
+            .hotcoor_10 {
+                display: none;
+            }
+
+            .heart-btn10 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1415px) {
+            .hotcoor_7 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1215px) {
+            .hotcoor_6 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hotcolor {
+                margin-top: 100px;
+            }
+
+            .more {
+                margin-top: 110px;
+            }
+
+            .heart-btn2 {
+                margin-left: 220px;
+            }
+
+            .heart-btn3 {
+                margin-left: 400px;
+            }
+
+            .heart-btn4 {
+                margin-left: 580px;
+            }
+
+            .heart-btn5 {
+                margin-left: 760px;
+            }
+
+            .c1 {
+                position: absolute;
+                left: 40px;
+            }
+
+            .c2 {
+                position: absolute;
+                left: 215px;
+            }
+
+            .c3 {
+                position: absolute;
+                left: 395px;
+            }
+
+            .c4 {
+                position: absolute;
+                left: 575px;
+            }
+
+            .c5 {
+                position: absolute;
+                left: 755px;
+            }
+
+            .button1 {
+                width: 35px;
+                height: 140px;
+                background-color: #000000;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button2 {
+                width: 35px;
+                height: 140px;
+                background-color: #F4DFC8;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button3 {
+                width: 35px;
+                height: 140px;
+                background-color: #F4EAE0;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button4 {
+                width: 35px;
+                height: 140px;
+                background-color: #FAF6F0;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button5 {
+                width: 35px;
+                height: 140px;
+                background-color: #860A35;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button6 {
+                width: 35px;
+                height: 140px;
+                background-color: #AF2655;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button7 {
+                width: 35px;
+                height: 140px;
+                background-color: #A3B763;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button8 {
+                width: 35px;
+                height: 140px;
+                background-color: #F3F3F3;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button9 {
+                width: 35px;
+                height: 140px;
+                background-color: #83A2FF;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button10 {
+                width: 35px;
+                height: 140px;
+                background-color: #B4BDFF;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button11 {
+                width: 35px;
+                height: 140px;
+                background-color: #FFE3BB;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button12 {
+                width: 35px;
+                height: 140px;
+                background-color: #FFD28F;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button13 {
+                width: 35px;
+                height: 140px;
+                background-color: #ECE3CE;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button14 {
+                width: 35px;
+                height: 140px;
+                background-color: #739072;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button15 {
+                width: 35px;
+                height: 140px;
+                background-color: #4F6F52;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button16 {
+                width: 35px;
+                height: 140px;
+                background-color: #3A4D39;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button17 {
+                width: 35px;
+                height: 140px;
+                background-color: #F875AA;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button18 {
+                width: 35px;
+                height: 140px;
+                background-color: #FFDFDF;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button19 {
+                width: 35px;
+                height: 140px;
+                background-color: #FFF6F6;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button20 {
+                width: 35px;
+                height: 140px;
+                background-color: #AEDEFC;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .hotcoor_6 {
+                display: none;
+            }
+
+            .hotcoor_7 {
+                display: none;
+            }
+
+        }
+
+        @media (max-width: 912px) {
+            .hotcoor_7 {
+                display: none;
+            }
+
+            .heart-btn7 {
+                display: none;
+            }
+
+            .hotcoor_6 {
+                display: none;
+            }
+
+            .heart-btn6 {
+                display: none;
+            }
+
+            .hotcoor_5 {
+                display: none;
+            }
+
+            .heart-btn5 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 915px) {
+            .hotcoor_5 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 820px) {
+            .button1 {
+                width: 35px;
+                height: 140px;
+                background-color: #000000;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button2 {
+                width: 35px;
+                height: 140px;
+                background-color: #F4DFC8;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button3 {
+                width: 35px;
+                height: 140px;
+                background-color: #F4EAE0;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button4 {
+                width: 35px;
+                height: 140px;
+                background-color: #FAF6F0;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button5 {
+                width: 35px;
+                height: 140px;
+                background-color: #860A35;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button6 {
+                width: 35px;
+                height: 140px;
+                background-color: #AF2655;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button7 {
+                width: 35px;
+                height: 140px;
+                background-color: #A3B763;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button8 {
+                width: 35px;
+                height: 140px;
+                background-color: #F3F3F3;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button9 {
+                width: 35px;
+                height: 140px;
+                background-color: #83A2FF;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button10 {
+                width: 35px;
+                height: 140px;
+                background-color: #B4BDFF;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button11 {
+                width: 35px;
+                height: 140px;
+                background-color: #FFE3BB;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button12 {
+                width: 35px;
+                height: 140px;
+                background-color: #FFD28F;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button13 {
+                width: 35px;
+                height: 140px;
+                background-color: #ECE3CE;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button14 {
+                width: 35px;
+                height: 140px;
+                background-color: #739072;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button15 {
+                width: 35px;
+                height: 140px;
+                background-color: #4F6F52;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button16 {
+                width: 35px;
+                height: 140px;
+                background-color: #3A4D39;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .c1 {
+                position: absolute;
+                left: 35px;
+                top: 2865px;
+            }
+
+            .c2 {
+                position: absolute;
+                left: 215px;
+                top: 2865px;
+            }
+
+            .c3 {
+                position: absolute;
+                left: 395px;
+                top: 2865px;
+            }
+
+            .c4 {
+                position: absolute;
+                left: 575px;
+                top: 2865px;
+            }
+
+            .heart-btn {
+                top: 2865px;
+            }
+
+            .heart-btn2 {
+                top: 2865px;
+                margin-left: 220px;
+            }
+
+            .heart-btn3 {
+                top: 2865px;
+                margin-left: 400px;
+            }
+
+            .heart-btn4 {
+                top: 2865px;
+                margin-left: 580px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .button1 {
+                width: 25px;
+                height: 100px;
+                background-color: #000000;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button2 {
+                width: 25px;
+                height: 100px;
+                background-color: #F4DFC8;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button3 {
+                width: 25px;
+                height: 100px;
+                background-color: #F4EAE0;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button4 {
+                width: 25px;
+                height: 100px;
+                background-color: #FAF6F0;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button5 {
+                width: 25px;
+                height: 100px;
+                background-color: #860A35;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button6 {
+                width: 25px;
+                height: 100px;
+                background-color: #AF2655;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button7 {
+                width: 25px;
+                height: 100px;
+                background-color: #A3B763;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button8 {
+                width: 25px;
+                height: 100px;
+                background-color: #F3F3F3;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button9 {
+                width: 25px;
+                height: 100px;
+                background-color: #83A2FF;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button10 {
+                width: 25px;
+                height: 100px;
+                background-color: #B4BDFF;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button11 {
+                width: 25px;
+                height: 100px;
+                background-color: #FFE3BB;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button12 {
+                width: 25px;
+                height: 100px;
+                background-color: #FFD28F;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button13 {
+                width: 25px;
+                height: 100px;
+                background-color: #ECE3CE;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button14 {
+                width: 25px;
+                height: 100px;
+                background-color: #739072;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button15 {
+                width: 25px;
+                height: 100px;
+                background-color: #4F6F52;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button16 {
+                width: 25px;
+                height: 100px;
+                background-color: #3A4D39;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button17 {
+                width: 25px;
+                height: 100px;
+                background-color: #F875AA;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button18 {
+                width: 25px;
+                height: 100px;
+                background-color: #FFDFDF;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button19 {
+                width: 25px;
+                height: 100px;
+                background-color: #FFF6F6;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button20 {
+                width: 25px;
+                height: 100px;
+                background-color: #AEDEFC;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button21 {
+                width: 25px;
+                height: 100px;
+                background-color: #DADDB1;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button22 {
+                width: 25px;
+                height: 100px;
+                background-color: #B3A492;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button23 {
+                width: 25px;
+                height: 100px;
+                background-color: #BFB29E;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button24 {
+                width: 25px;
+                height: 100px;
+                background-color: #D6C7AE;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button25 {
+                width: 25px;
+                height: 100px;
+                background-color: #EEF5FF;
+                border-radius: 5% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button26 {
+                width: 25px;
+                height: 100px;
+                background-color: #9EB8D9;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button27 {
+                width: 25px;
+                height: 100px;
+                background-color: #7C93C3;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button28 {
+                width: 25px;
+                height: 100px;
+                background-color: #A25772;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button29 {
+                width: 25px;
+                height: 100px;
+                background-color: #0766AD;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button30 {
+                width: 25px;
+                height: 100px;
+                background-color: #29ADB2;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button31 {
+                width: 25px;
+                height: 100px;
+                background-color: #C5E898;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button32 {
+                width: 25px;
+                height: 100px;
+                background-color: #F3F3F3;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button33 {
+                width: 25px;
+                height: 100px;
+                background-color: #7071E8;
+                border-radius: 5% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button34 {
+                width: 25px;
+                height: 100px;
+                background-color: #C683D7;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button35 {
+                width: 25px;
+                height: 100px;
+                background-color: #ED9ED6;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button36 {
+                width: 25px;
+                height: 100px;
+                background-color: #FFC7C7;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button37 {
+                width: 25px;
+                height: 100px;
+                background-color: #FF8F8F;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button38 {
+                width: 25px;
+                height: 100px;
+                background-color: #EEF296;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button39 {
+                width: 25px;
+                height: 100px;
+                background-color: #9ADE7B;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button40 {
+                width: 25px;
+                height: 100px;
+                background-color: #508D69;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+
+            .c1 {
+                position: absolute;
+                left: 0px;
+                top: 2815px;
+            }
+
+            .c2 {
+                position: absolute;
+                left: 135px;
+                top: 2815px;
+            }
+
+            .c3 {
+                position: absolute;
+                left: 275px;
+                top: 2815px;
+            }
+
+            .c4 {
+                position: absolute;
+                left: 415px;
+                top: 2815px;
+            }
+
+            .c5 {
+                position: absolute;
+                left: 555px;
+                top: 2815px;
+            }
+
+            .c6 {
+                position: absolute;
+                left: 0px;
+                top: 2965px;
+            }
+
+            .c7 {
+                position: absolute;
+                left: 135px;
+                top: 2965px;
+            }
+
+            .c8 {
+                position: absolute;
+                left: 275px;
+                top: 2965px;
+            }
+
+            .c9 {
+                position: absolute;
+                left: 415px;
+                top: 2965px;
+            }
+
+            .c10 {
+                position: absolute;
+                left: 555px;
+                top: 2965px;
+            }
+
+            .heart-btn {
+                display: none;
+            }
+
+            .heart-btn2 {
+                display: none;
+            }
+
+            .heart-btn3 {
+                display: none;
+            }
+
+            .heart-btn4 {
+                display: none;
+            }
+
+            .heart-btn5 {
+                display: none;
+            }
+
+            .heart-btn6 {
+                display: none;
+            }
+
+            .heart-btn7 {
+                display: none;
+            }
+
+            .heart-btn8 {
+                display: none;
+            }
+
+            .hotcoor_5 {
+                display: block;
+            }
+
+            .hotcoor_6 {
+                display: block;
+            }
+
+            .hotcoor_7 {
+                display: block;
+            }
+
+            .hotcoor_8 {
+                display: block;
+            }
+
+            .hotcoor_9 {
+                display: block;
+            }
+
+            .hotcoor_10 {
+                display: block;
+            }
+        }
+
+        @media (max-width: 715px) {
+            .hotcoor_9 {
+                display: none;
+            }
+
+            .hotcoor_10 {
+                display: none;
+            }
+
+            .c5 {
+                position: absolute;
+                left: 0px;
+                top: 2965px;
+            }
+
+            .c6 {
+                position: absolute;
+                left: 135px;
+                top: 2965px;
+            }
+
+            .c7 {
+                position: absolute;
+                left: 275px;
+                top: 2965px;
+            }
+
+            .c8 {
+                position: absolute;
+                left: 415px;
+                top: 2965px;
+            }
+
+            .c9 {
+                display: none;
+            }
+
+            .c10 {
+                display: none;
+            }
+        }
+
+        @media (max-width:575px) {
+            .hotcoor_7 {
+                display: none;
+            }
+
+            .hotcoor_8 {
+                display: none;
+            }
+
+            .c4 {
+                position: absolute;
+                left: 0px;
+                top: 2965px;
+            }
+
+            .c5 {
+                position: absolute;
+                left: 135px;
+                top: 2965px;
+            }
+
+            .c6 {
+                position: absolute;
+                left: 275px;
+                top: 2965px;
+            }
+
+            .c7 {
+                display: none;
+            }
+
+            .c8 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .hotcoor_7 {
+                display: none;
+            }
+
+            .hotcoor_8 {
+                display: none;
+            }
+
+            .hotcoor_9 {
+                display: none;
+            }
+
+            .hotcoor_10 {
+                display: none;
+            }
+
+            .c1 {
+                position: absolute;
+                left: 0px;
+                top: 2815px;
+            }
+
+            .c2 {
+                position: absolute;
+                left: 135px;
+                top: 2815px;
+            }
+
+            .c3 {
+                position: absolute;
+                left: 275px;
+                top: 2815px;
+            }
+
+            .c4 {
+                position: absolute;
+                left: 0px;
+                top: 2965px;
+            }
+
+            .c5 {
+                position: absolute;
+                left: 135px;
+                top: 2965px;
+            }
+
+            .c6 {
+                position: absolute;
+                left: 275px;
+                top: 2965px;
+            }
+
+            .c7 {
+                display: none;
+            }
+
+            .c8 {
+                display: none;
+            }
+        }
+
+        @media (max-width:435px) {
+            .hotcoor_5 {
+                display: none;
+            }
+
+            .hotcoor_6 {
+                display: none;
+            }
+
+            .c3 {
+                position: absolute;
+                left: 0px;
+                top: 2965px;
+            }
+
+            .c4 {
+                position: absolute;
+                left: 135px;
+                top: 2965px;
+            }
+
+            .c5 {
+                display: none;
+            }
+
+            .c6 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 414px) {
+            .hotcoor_5 {
+                display: none;
+            }
+
+            .hotcoor_9 {
+                display: none;
+            }
+
+            .hotcoor_10 {
+                display: none;
+            }
+
+            .heart-btn5 {
+                display: none;
+            }
+
+            .button1 {
+                width: 30px;
+                height: 120px;
+                background-color: #000000;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button2 {
+                width: 30px;
+                height: 120px;
+                background-color: #F4DFC8;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button3 {
+                width: 30px;
+                height: 120px;
+                background-color: #F4EAE0;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button4 {
+                width: 30px;
+                height: 120px;
+                background-color: #FAF6F0;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button5 {
+                width: 30px;
+                height: 120px;
+                background-color: #860A35;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button6 {
+                width: 30px;
+                height: 120px;
+                background-color: #AF2655;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button7 {
+                width: 30px;
+                height: 120px;
+                background-color: #A3B763;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button8 {
+                width: 30px;
+                height: 120px;
+                background-color: #F3F3F3;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button9 {
+                width: 30px;
+                height: 120px;
+                background-color: #83A2FF;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button10 {
+                width: 30px;
+                height: 120px;
+                background-color: #B4BDFF;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button11 {
+                width: 30px;
+                height: 120px;
+                background-color: #FFE3BB;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button12 {
+                width: 30px;
+                height: 120px;
+                background-color: #FFD28F;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button13 {
+                width: 30px;
+                height: 120px;
+                background-color: #ECE3CE;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button14 {
+                width: 30px;
+                height: 120px;
+                background-color: #739072;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button15 {
+                width: 30px;
+                height: 120px;
+                background-color: #4F6F52;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button16 {
+                width: 30px;
+                height: 120px;
+                background-color: #3A4D39;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .c1 {
+                position: absolute;
+                left: 15px;
+                top: 2840px;
+            }
+
+            .c2 {
+                position: absolute;
+                left: 170px;
+                top: 2840px;
+            }
+
+            .c3 {
+                position: absolute;
+                left: 15px;
+                top: 3010px;
+            }
+
+            .c4 {
+                position: absolute;
+                left: 170px;
+                top: 3010px;
+            }
+
+            .heart-btn {
+                display: none;
+            }
+
+            .heart-btn2 {
+                display: none;
+            }
+
+            .heart-btn3 {
+                display: none;
+            }
+
+            .heart-btn4 {
+                display: none;
+            }
+
+            .heart-btn5 {
+                display: none;
+            }
+
+            .heart-btn6 {
+                display: none;
+            }
+
+            .heart-btn7 {
+                display: none;
+            }
+
+            .heart-btn8 {
+                display: none;
+            }
+
+            .hotcoor_5 {
+                display: none;
+            }
+
+            .hotcoor_6 {
+                display: none;
+            }
+
+            .hotcoor_7 {
+                display: none;
+            }
+
+            .hotcoor_8 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .hotcoor_5 {
+                display: none;
+            }
+
+            .heart-btn5 {
+                display: none;
+            }
+
+            .button1 {
+                width: 25px;
+                height: 100px;
+                background-color: #000000;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button2 {
+                width: 25px;
+                height: 100px;
+                background-color: #F4DFC8;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button3 {
+                width: 25px;
+                height: 100px;
+                background-color: #F4EAE0;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button4 {
+                width: 25px;
+                height: 100px;
+                background-color: #FAF6F0;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button5 {
+                width: 25px;
+                height: 100px;
+                background-color: #860A35;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button6 {
+                width: 25px;
+                height: 100px;
+                background-color: #AF2655;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button7 {
+                width: 25px;
+                height: 100px;
+                background-color: #A3B763;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button8 {
+                width: 25px;
+                height: 100px;
+                background-color: #F3F3F3;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button9 {
+                width: 25px;
+                height: 100px;
+                background-color: #83A2FF;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button10 {
+                width: 25px;
+                height: 100px;
+                background-color: #B4BDFF;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button11 {
+                width: 25px;
+                height: 100px;
+                background-color: #FFE3BB;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button12 {
+                width: 25px;
+                height: 100px;
+                background-color: #FFD28F;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button13 {
+                width: 25px;
+                height: 100px;
+                background-color: #ECE3CE;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button14 {
+                width: 25px;
+                height: 100px;
+                background-color: #739072;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button15 {
+                width: 25px;
+                height: 100px;
+                background-color: #4F6F52;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button16 {
+                width: 25px;
+                height: 100px;
+                background-color: #3A4D39;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .c1 {
+                position: absolute;
+                left: -5px;
+                top: 3335px;
+            }
+
+            .c2 {
+                position: absolute;
+                left: 130px;
+                top: 3335px;
+            }
+
+            .c3 {
+                position: absolute;
+                left: -5px;
+                top: 3480px;
+            }
+
+            .c4 {
+                position: absolute;
+                left: 130px;
+                top: 3480px;
+            }
+
+            .heart-btn {
+                display: none;
+            }
+
+            .heart-btn2 {
+                display: none;
+            }
+
+            .heart-btn3 {
+                display: none;
+            }
+
+            .heart-btn4 {
+                display: none;
+            }
+
+            .heart-btn5 {
+                display: none;
+            }
+
+            .heart-btn6 {
+                display: none;
+            }
+
+            .heart-btn7 {
+                display: none;
+            }
+
+            .heart-btn8 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 295px) {
+            .button1 {
+                width: 20px;
+                height: 80px;
+                background-color: #000000;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button2 {
+                width: 20px;
+                height: 80px;
+                background-color: #F4DFC8;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button3 {
+                width: 20px;
+                height: 80px;
+                background-color: #F4EAE0;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button4 {
+                width: 20px;
+                height: 80px;
+                background-color: #FAF6F0;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button5 {
+                width: 20px;
+                height: 80px;
+                background-color: #860A35;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button6 {
+                width: 20px;
+                height: 80px;
+                background-color: #AF2655;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button7 {
+                width: 20px;
+                height: 80px;
+                background-color: #A3B763;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button8 {
+                width: 20px;
+                height: 80px;
+                background-color: #F3F3F3;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button9 {
+                width: 20px;
+                height: 80px;
+                background-color: #83A2FF;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button10 {
+                width: 20px;
+                height: 80px;
+                background-color: #B4BDFF;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button11 {
+                width: 20px;
+                height: 80px;
+                background-color: #FFE3BB;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button12 {
+                width: 20px;
+                height: 80px;
+                background-color: #FFD28F;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button13 {
+                width: 20px;
+                height: 80px;
+                background-color: #ECE3CE;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button14 {
+                width: 20px;
+                height: 80px;
+                background-color: #739072;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button15 {
+                width: 20px;
+                height: 80px;
+                background-color: #4F6F52;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button16 {
+                width: 20px;
+                height: 80px;
+                background-color: #3A4D39;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .c1 {
+                position: absolute;
+                left: -25px;
+                top: 3310px;
+            }
+
+            .c2 {
+                position: absolute;
+                left: 90px;
+                top: 3310px;
+            }
+
+            .c3 {
+                position: absolute;
+                left: -25px;
+                top: 3440px;
+            }
+
+            .c4 {
+                position: absolute;
+                left: 90px;
+                top: 3440px;
+            }
+        }
+
+        @media (max-width: 280px) {
+            .nametag {
+                font-size: 30px;
+                margin-left: 30px;
+            }
+
+            .hotcolor {
+                margin-top: 30px;
+            }
+
+            .ccc {
+                font-size: 10px;
+            }
+
+            .button1 {
+                width: 20px;
+                height: 80px;
+                background-color: #000000;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button2 {
+                width: 20px;
+                height: 80px;
+                background-color: #F4DFC8;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button3 {
+                width: 20px;
+                height: 80px;
+                background-color: #F4EAE0;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button4 {
+                width: 20px;
+                height: 80px;
+                background-color: #FAF6F0;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button5 {
+                width: 20px;
+                height: 80px;
+                background-color: #860A35;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button6 {
+                width: 20px;
+                height: 80px;
+                background-color: #AF2655;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button7 {
+                width: 20px;
+                height: 80px;
+                background-color: #A3B763;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button8 {
+                width: 20px;
+                height: 80px;
+                background-color: #F3F3F3;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button9 {
+                width: 20px;
+                height: 80px;
+                background-color: #83A2FF;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button10 {
+                width: 20px;
+                height: 80px;
+                background-color: #B4BDFF;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button11 {
+                width: 20px;
+                height: 80px;
+                background-color: #FFE3BB;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button12 {
+                width: 20px;
+                height: 80px;
+                background-color: #FFD28F;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button13 {
+                width: 20px;
+                height: 80px;
+                background-color: #ECE3CE;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button14 {
+                width: 20px;
+                height: 80px;
+                background-color: #739072;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button15 {
+                width: 20px;
+                height: 80px;
+                background-color: #4F6F52;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button16 {
+                width: 20px;
+                height: 80px;
+                background-color: #3A4D39;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button17 {
+                width: 20px;
+                height: 80px;
+                background-color: #F875AA;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button18 {
+                width: 20px;
+                height: 80px;
+                background-color: #FFDFDF;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button19 {
+                width: 20px;
+                height: 80px;
+                background-color: #FFF6F6;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button20 {
+                width: 20px;
+                height: 80px;
+                background-color: #AEDEFC;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button21 {
+                width: 20px;
+                height: 80px;
+                background-color: #DADDB1;
+                border-radius: 5% 0% 0% 5%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button22 {
+                width: 20px;
+                height: 80px;
+                background-color: #B3A492;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button23 {
+                width: 20px;
+                height: 80px;
+                background-color: #BFB29E;
+                border-radius: 0% 0% 0% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .button24 {
+                width: 20px;
+                height: 80px;
+                background-color: #D6C7AE;
+                border-radius: 0% 5% 5% 0%;
+                border: unset;
+                float: left;
+                transition: all 0.6s;
+            }
+
+            .c1 {
+                position: absolute;
+                left: -25px;
+                top: 3260px;
+            }
+
+            .c2 {
+                position: absolute;
+                left: 90px;
+                top: 3260px;
+            }
+
+            .c3 {
+                position: absolute;
+                left: -25px;
+                top: 3385px;
+            }
+
+            .c4 {
+                position: absolute;
+                left: 90px;
+                top: 3385px;
+            }
+
+            .c5 {
+                display: block;
+                position: absolute;
+                left: -25px;
+                top: 35px;
+            }
+
+            .c6 {
+                display: block;
+                position: absolute;
+                left: 90px;
+                top: 3600px;
+            }
+
+            .hotcoor_5 {
+                display: block;
+            }
+
+            .hotcoor_6 {
+                display: block;
+            }
+
+            .hotcolor {
+                margin-top: 90px;
+            }
+        }
+
+        /* 민근 */
+        .footer {
+            box-sizing: border-box;
+            width: 100%;
+            height: 5%;
+            background-color: #fff;
+        }
+
+        .container_warpper {
+            margin-top: 0;
+        }
+
+
+        .first_container {
+            display: flex;
+            width: 100%;
+            max-width: 1176px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo_container {
+            width: 400px;
+            margin-left: 2em;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .main_container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+
+        .footer_logo {
+            padding-right: 100px;
+        }
+
+
+
+        .title_text>a {
+            text-decoration: none;
+            color: #191919;
+        }
+
+        .footer_text {
+            display: flex;
+
+        }
+
+        .title_text {
+            margin-left: 100px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #191919;
+            border: none;
+            box-shadow: none;
+            outline: none;
+        }
+
+
+        .second_container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1176px;
+            margin-top: 90px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .email {
+            display: flex;
+            font-size: 12px;
+            color: #525252;
+            margin: auto;
+        }
+
+        .term_privacy_container {
+            font-size: 10px;
+            color: #7a7a7a;
+            margin: 16px 0;
+        }
+
+        .icon_button {
+            margin-right: 10px;
+        }
+
+        .footer_logo_container {
+            display: flex;
+        }
+
+        .second_second_container {
+            margin-left: 8%;
+        }
+
+        @media screen and (max-width: 1135px) {
+            .main_container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin: 0 10%;
+            }
+
+            .footer_logo {
+                margin-bottom: 50px;
+            }
+
+            .footer_text {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .title_text {
+                margin-bottom: 40px;
+                margin-left: 0px;
+            }
+
+            .second_container {
+                display: flex;
+                flex-direction: column;
+                margin-top: 60px;
+            }
+
+            .footer_logo_container {
+                margin: 0 10%;
+            }
+
+            .second_second_container {
+
+                margin: 0 10%;
+                margin-top: 50px;
+            }
+
+        }
+
+        .header_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            padding-left: 16px;
+            padding-right: 16px;
+            height: 100%;
+        }
+
+
+        .header_react {
+            width: 100%;
+            max-width: 1176px;
+            margin-top: 0%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+        }
+
+
+
+        .header_logo {
+            display: flex;
+            margin-left: 5%;
+
+        }
+
+        .logo_container {
+            max-width: 100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+
+
+        .header_center {
+            width: 50%;
+        }
+
+        form.input_box {
+            display: flex;
+            max-width: 100%;
+        }
+
+        .text_input_box {
+            width: calc(100% - 60px);
+            height: 26px;
+            padding: 0 6px;
+            border: 0.5px solid black;
+            border-right: none;
+            border-radius: 8px 0 0 8px;
+        }
+
+
+        .search {
+            width: 60px;
+            height: 27px;
+            padding: 0 6px;
+            background-color: rgb(43, 43, 43);
+            border: 0.5px solid black;
+            border-left: none;
+            border-radius: 0 8px 8px 0;
+            color: #fff;
+            font-weight: 600;
+        }
+
+
+
+        .header_button {
+
+            display: flex;
+            align-items: center;
+            list-style: none;
+            white-space: nowrap;
+            margin-right: 40px;
+        }
+
+        .subscribe {
+            border: none;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .login {
+            margin-left: 10px;
+            border: none;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+
+        @media (max-width:375px) {
+            .subscribe {
+                display: none;
+            }
+            .login {
+                display: none;
+            }
+            .header {
+                width:98vw;
+                height: 10vw;
+            }
+        }
+ /* 재원 */
+        /* 재원 카테고리 */
+        .main1 {
+            padding: 1em;
+            padding-top: 1em;
+            font-size: 3em;
+            color: #375fbc;
+            font-weight: bold;
+        }
+
+        .main2 {
+            padding: 1em;
+            padding-top: 1em;
+            font-size: 3em;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .exit {
+            border-radius: 20px;
+            margin-left: 1em;
+            background-color: transparent;
+            padding: 10px;
+            color: #000000;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+
+        .sect_1 {
+            margin-left: 3em;
+            font-size: 2em;
+            color: #375fbc;
+            font-weight: bold;
+        }
+
+        .sect_2 {
+            margin-left: 3em;
+            margin-top: 1em;
+            font-size: 2em;
+            color: #375fbc;
+            font-weight: bold;
+        }
+
+        .sect_3 {
+            margin-left: 3em;
+            margin-top: 1em;
+            font-size: 2em;
+            color: #375fbc;
+            font-weight: bold;
+        }
+
+        .wrap1 {
+            height: 400px;
+            background-color: #ffffff;
+            margin: 0 auto;
+            color: #000000;
+        }
+
+        .important_container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .recommand_container {
+            white-space: nowrap;
+            font-size: 3em;
+            color: black;
+            margin-left: 10%;
+            font-weight: bold;
+        }
+
+        .exit1 {
+            width: 10em;
+            height: 40px;
+            border-radius: 20px;
+            border-color: #979797;
+            margin-left: 3em;
+            background-color: transparent;
+            padding: 10px;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .exit1:hover {
+            background-color: rgb(181, 179, 255);
+            box-shadow: 5px 5px 5px #979797
+        }
+
+        .exit1:focus {
+            background-color: #161616;
+            color: #ffffff;
+        }
+
+        .exit2 {
+            width: 10em;
+            height: 40px;
+            border-radius: 20px;
+            border-color: #979797;
+            margin-left: 3em;
+            background-color: transparent;
+            padding: 10px;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        /* 재원 마우스 오버시 효과*/
+        .exit2:hover {
+            background-color: rgb(181, 179, 255);
+            box-shadow: 5px 5px 5px #979797
+        }
+
+        /* 재원 마우스 클릭시 효과*/
+        .exit2:focus {
+            background-color: #161616;
+            color: #ffffff;
+        }
+
+
+        .middle_container {
+            color: #000000;
+            font-weight: bold;
+            display: flex;
+            white-space: nowrap;
+            margin-top: 20px;
+        }
+
+        .middle_1container {
+            margin-left: 5%;
+            font-size: 2em;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .middle_2container {
+            display: flex;
+            align-items: center;
+        }
+
+        .next_page {
+            display: flex;
+        }
+
+        .final_1container {
+            margin-left: 5%;
+            font-size: 2em;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .final_container {
+            color: #000000;
+            font-weight: bold;
+            display: flex;
+            white-space: nowrap;
+            margin-top: 20px;
+        }
+
+
+        .final_2container {
+            display: flex;
+            align-items: center;
+        }
+
+
+        /* 재원 카테고리 미디어 쿼리*/
+        @media (max-width: 1024px) {
+            .wrap1 {
+                height: 400px;
+                background-color: #ffffff;
+                margin: 0 auto;
+                color: #fff;
+            }
+
+            .important_container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .recommand_container {
+                white-space: nowrap;
+                font-size: 3em;
+                color: black;
+                margin-left: 10%;
+                font-weight: bold;
+            }
+
+            .exit1 {
+                width: 150px;
+                height: 40px;
+                border-radius: 20px;
+                border-color: #979797;
+                margin-left: 1em;
+                background-color: transparent;
+                padding: 10px;
+                color: #000000;
+                font-weight: bold;
+
+            }
+
+            .exit2 {
+                width: 150px;
+                height: 40px;
+                border-radius: 20px;
+                border-color: #979797;
+                margin-left: 1em;
+                background-color: transparent;
+                padding: 10px;
+                color: #000000;
+                font-weight: bold;
+            }
+
+            .middle_container {
+                color: #000000;
+                font-weight: bold;
+                display: flex;
+                white-space: nowrap;
+                margin-top: 10px;
+            }
+
+            .middle_1container {
+                margin-left: 5%;
+                font-size: 2em;
+                color: #000000;
+                font-weight: bold;
+            }
+
+            .middle_2container {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .next_page {
+                display: flex;
+            }
+
+            .final_1container {
+                margin-left: 5%;
+                font-size: 2em;
+                color: #000000;
+                font-weight: bold;
+            }
+
+            .final_container {
+                color: #000000;
+                font-weight: bold;
+                display: flex;
+                white-space: nowrap;
+                margin-top: 20px;
+            }
+
+
+
+            .final_2container {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+        }
+
+        /* 재원 추천영상*/
+        .wrap2 {
+            height: 1600px;
+            background-color: #000000;
+            margin: 0 auto;
+        }
+
+        .middle_container2 {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .middle_1container2 {
+            margin-left: 5%;
+        }
+
+        .middle_2container2 {
+            display: block;
+            font-size: 1em;
+            margin-right: 5px;
+        }
+
+        .middle_container3 {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .middle_1container3 {
+            margin-left: 5%;
+        }
+
+        .middle_2container3 {
+            display: block;
+            font-size: 1em;
+            margin-right: 5px;
+        }
+
+        .middle_container4 {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .middle_1container4 {
+            margin-left: 5%;
+        }
+
+        .middle_2container4 {
+            display: block;
+            font-size: 1em;
+            margin-right: 5px;
+        }
+
+        .final_container2 {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .final_1container2 {
+            margin-left: 5%;
+        }
+
+        .final_2container2 {
+            display: block;
+            font-size: 1em;
+            margin-right: 5px;
+        }
+
+        .final_container3 {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .final_1container3 {
+            margin-left: 5%;
+        }
+
+        .final_2container3 {
+            display: block;
+            font-size: 1em;
+            margin-right: 5px;
+        }
+
+        .final_container4 {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .final_1container4 {
+            margin-left: 5%;
+        }
+
+        .final_2container4 {
+            display: block;
+            font-size: 1em;
+            margin-right: 5px;
+        }
+
+        .final_container5 {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .final_1container5 {
+            margin-left: 5%;
+        }
+
+        .final_2container5 {
+            display: block;
+            font-size: 1em;
+            margin-right: 5px;
+        }
+
+        .item_font {
+            float: left;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        .item_img {
+            float: left;
+            padding: 10px;
+            border: 0px solid black;
+            overflow: hidden;
+        }
+
+        .item1 {
+            float: left;
+            margin: 0 0px;
+            padding: 3px;
+            background-color: rgb(250, 43, 43);
+            border: 3px solid rgb(250, 43, 43);
+
+            border-radius: 5px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .item2 {
+            float: left;
+            margin: 0 10px;
+            padding: 6px;
+            color: rgb(255, 120, 120);
+            background-color: #000000;
+            border: 1.5px solid rgb(255, 120, 120);
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .item3 {
+            float: left;
+            width: 150px;
+            height: 10px;
+            padding: 2px;
+            font-weight: bold;
+        }
+
+        .item4 {
+            float: left;
+            margin-top: -10px;
+            width: 150px;
+            height: 10px;
+            padding: 2px;
+            color: #686868;
+            font-weight: bold;
+        }
+
+        .category {
+            display: none;
+            white-space: nowrap;
+            flex-wrap: wrap;
+        }
+
+        .main1 {
+            display: none;
+        }
+
+        /* 재원 추천영상 미디어 쿼리*/
+        @media (max-width: 1550px) {
+            .category {
+                display: flex;
+            }
+
+            .main1 {
+                display: block;
+            }
+        }
+
+        @media (min-width: 200px) and (max-width: 370px) {
+
+            .img_size {
+                width: 25vw;
+                height: 17vw;
+                margin-left: 3vw;
+
+            }
+
+
+            .recommand_container {
+                font-size: 8vw;
+            }
+        }
+
+        @media (min-width: 370px) and (max-width: 680px) {
+
+            .img_size {
+                width: 30vw;
+                height: 18vw;
+                margin-left: 3vw;
+
+            }
+
+            .final_container3 {
+                display: block;
+                margin-top: 20px;
+            }
+
+            .recommand_container {
+                font-size: 7vw;
+            }
+        }
+
+
+        @media (min-width: 680px) and (max-width: 1100px) {
+
+            .img_size {
+                width: 50vw;
+                height: 32vw;
+
+            }
+
+            .middle_container3 {
+                display: none;
+                margin-top: 20px;
+            }
+
+
+        }
+
+        @media (min-width: 1020px) and (max-width: 1130px) {
+
+            .img_size {
+                width: 25vw;
+                height: 14vw;
+
+            }
+
+            .final_container3 {
+                display: block;
+                margin-top: 20px;
+            }
+
+            .middle_container3 {
+                display: block;
+                margin-top: 20px;
+            }
+
+            .middle_container4 {
+                display: block;
+                margin-top: 20px;
+            }
+
+            .final_container4 {
+                display: block;
+                margin-top: 20px;
+            }
+
+            .final_container5 {
+                display: block;
+                margin-top: 20px;
+            }
+
+
+
+
+        }
+
+        @media (min-width: 1130px) and (max-width: 1430px) {
+
+            .img_size {
+                width: 28vw;
+                height: 16vw;
+
+            }
+
+            .final_container3 {
+                display: block;
+                margin-top: 20px;
+            }
+
+            .middle_container3 {
+                display: block;
+                margin-top: 20px;
+            }
+
+            .middle_container4 {
+                display: block;
+                margin-top: 20px;
+            }
+
+            
+
+            
+
+        }  
+
+        @media (min-width: 1430px) and (max-width: 1750px) {
+
+            .img_size {
+                width: 28vw;
+                height: 16vw;
+
+            }
+
+            .middle_container3 {
+                display: block;
+                margin-top: 20px;
+            }
+
+            .middle_container4 {
+                display: block;
+                margin-top: 20px;
+            }
+
+
+
+
+
+        }
+
+        /*호영*/
+        .section input[id*="slide"] {
+            display: none;
+        }
+
+        .section .slidewrap {
+            max-width: 4000px;
+            margin: 0 auto;
+        }
+
+        .section .slidelist {
+            white-space: nowrap;
+            font-size: 0;
+            overflow: hidden;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section .slidelist>li {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            transition: all .5s;
+        }
+
+        .section .slidelist>li>a {
+            display: block;
+            position: relative;
+        }
+
+        .section .slidelist>li>a img {
+            width: 100%;
+        }
+
+        .section .slidelist label {
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 3vw;
+            cursor: pointer;
+        }
+
+        /* input에 체크되면 슬라이드 효과 */
+        .section input[id="slide01"]:checked~.slidewrap .slidelist>li {
+            transform: translateX(0%);
+        }
+
+        .section input[id="slide02"]:checked~.slidewrap .slidelist>li {
+            transform: translateX(-100%);
+        }
+
+        .section input[id="slide03"]:checked~.slidewrap .slidelist>li {
+            transform: translateX(-200%);
+        }
+
+        .section input[id="slide04"]:checked~.slidewrap .slidelist>li {
+            transform: translateX(-300%);
+        }
+
+        /* 좌,우 슬라이드 버튼 */
+        .slide-control>div {
+            display: none;
+        }
+
+        .section .left {
+            left: 30px;
+            background: url('https://cdn-icons-png.flaticon.com/512/271/271220.png') center center / 100% no-repeat;
+        }
+
+        .section .right {
+            right: 30px;
+            background: url('https://cdn-icons-png.flaticon.com/512/271/271228.png') center center / 100% no-repeat;
+        }
+
+        .section input[id="slide01"]:checked~.slidewrap .slide-control>div:nth-child(1) {
+            display: block;
+        }
+
+        .section input[id="slide02"]:checked~.slidewrap .slide-control>div:nth-child(2) {
+            display: block;
+        }
+
+        .section input[id="slide03"]:checked~.slidewrap .slide-control>div:nth-child(3) {
+            display: block;
+        }
+
+        .section input[id="slide04"]:checked~.slidewrap .slide-control>div:nth-child(4) {
+            display: block;
+        }
+    </style>
+    <script>
+        function copyToClipboard(val) {
+            var t = document.createElement("textarea");
+            document.body.appendChild(t);
+            t.value = val;
+            t.select();
+            document.execCommand('copy');
+            document.body.removeChild(t);
+        }
+
+        function sendm() {
+            alert('복사되었습니다.');
+        }
+
+        function cr() {
+
+        }
+        const heartIcon = document.querySelector(".like-button .heart-icon");
+        const likesAmountLabel = document.querySelector(".like-button .likes-amount");
+
+        let likesAmount = 32;
+
+        heartIcon.addEventListener("click", () => {
+            heartIcon.classList.toggle("liked");
+            if (heartIcon.classList.contains("liked")) {
+                likesAmount++;
+            } else {
+                likesAmount--;
+            }
+
+            likesAmountLabel.innerHTML = likesAmount;
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="header_container header_react">
+                <div class="header_logo">
+                    <a href="#">
+                        <div class="logo_container">
+                            <img src="https://i.postimg.cc/qqH5Yxmn/png-4.png" width="80%">
+                        </div>
+                    </a>
+                </div>
+                <div class="header_center">
+                    <form class="input_box" onsubmit="return">
+                        <input class="text_input_box" placeholder=" ">
+                        <button class="search">검색</button>
+                    </form>
+                </div>
+                <div class="header_button">
+                    <a href="#">
+                        <button class="subscribe">구독하기</button>
+                    </a>
+                    <a href="#">
+                        <button class="login">로그인</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="contents1">
+            <div class="section">
+                <input type="radio" name="slide" id="slide01" checked>
+                <input type="radio" name="slide" id="slide02">
+                <input type="radio" name="slide" id="slide03">
+                <input type="radio" name="slide" id="slide04">
+                <div class="slidewrap">
+
+                    <ul class="slidelist">
+                        <!-- 슬라이드 영역 -->
+                        <li class="slideitem">
+                            <a href="#">
+                                <img src=" https://i.postimg.cc/xjZwn9Bt/tkwls-4.jpg">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a href="#">
+                                <img src=" https://i.postimg.cc/y6F7QgD0/tkwls-5.jpg">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a href="#">
+                                <img src="https://i.postimg.cc/mrcC9fbZ/tkwls-8.jpg">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a href="#">
+                                <img src=" https://i.postimg.cc/ryZhxgJm/tkwls-1.jpg">
+                            </a>
+                        </li class="slideitem">
+
+                        <!-- 좌,우 슬라이드 버튼 -->
+                        <div class="slide-control">
+                            <div>
+                                <label for="slide04" class="left"></label>
+                                <label for="slide02" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide01" class="left"></label>
+                                <label for="slide03" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide02" class="left"></label>
+                                <label for="slide04" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide03" class="left"></label>
+                                <label for="slide01" class="right"></label>
+                            </div>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="main1">카테고리</div>
+            <div class="category">
+                <a href="#"><button class="exit">#영상편집</button></a>
+                <a href="#"><button class="exit">#2D 그래픽</button></a>
+                <a href="#"><button class="exit">#3D 그래픽</button></a>
+                <a href="#"><button class="exit">#VFX</button></a>
+                <a href="#"><button class="exit">#애니메이션</button></a>
+                <a href="#"><button class="exit">#게임그래픽</button></a>
+                <a href="#"><button class="exit">#게임 디자인</button></a>
+                <a href="#"><button class="exit">#게임기획</button></a>
+                <a href="#"><button class="exit">#프로그래밍</button></a>
+                <a href="#"><button class="exit">#시뮬레이터</button></a>
+                <a href="#"><button class="exit">#영상 디자인</button></a>
+                <a href="#"><button class="exit">#웹 디자인</button></a>
+                <a href="#"><button class="exit">#캐릭터 디자인</button></a>
+                <a href="#"><button class="exit">#UI/UX 디자인</button></a>
+                <a href="#"><button class="exit">#패션 디자인</button></a>
+                <a href="#"><button class="exit">#건축 디자인</button></a>
+                <a href="#"><button class="exit">#콘텐츠 기획</button></a>
+                <a href="#"><button class="exit">#작곡</button></a>
+                <a href="#"><button class="exit">#블렌더</button></a>
+                <a href="#"><button class="exit">#만화/웹툰</button></a>
+                <a href="#"><button class="exit">#게임 기획</button></a>
+                <a href="#"><button class="exit">#손그림</button></a>
+                <a href="#"><button class="exit">#FX</button></a>
+                <a href="#"><button class="exit">#브랜드 디자인</button></a>
+                <a href="#"><button class="exit">#인테리어 디자인</button></a>
+                <a href="#"><button class="exit">#랜스케입 건축</button></a>
+                <a href="#"><button class="exit">#인더스트리얼 디자인</button></a>
+                <a href="#"><button class="exit">#엔지니어링 디자인</button></a>
+            </div>
+            <div style="background-color: #000; width: 100%; height: 50%"></div>
+        </div>
+
+        <div class="contents2">
+            <div class="wrap2">
+                <div class="important_container">
+
+                    <div class="recommand_container">
+                        <p style="color: #ffffff; margin-left: -4vw;">추천영상</p>
+                    </div>
+
+
+                    <div class="middle_container2">
+                        <!--재원 추천영상이미지1-->
+                        <div class="middle_1container2">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/90HyYRrL/tkwls-2.jpg"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상제목1-->
+                        <div class="middle_2container2">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">인터랙티브 웹사이트로 만드는 디자인 포트폴리오 Class</div>
+                                <br><br><br><br>
+                                <div class="item4">박하늘, 고윤서</div>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상이미지2-->
+                        <div class="middle_1container2">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/MpLMYML1/tkwls-3.jpg"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상제목2-->
+                        <div class="middle_2container2">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">입문자를 위한 포토샵 완전 기초부터 응용 심화까지</div>
+                                <br><br><br><br>
+                                <div class="item4">D.HARA</div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="final_container2">
+                        <!--재원 추천영상이미지3-->
+                        <div class="final_1container2">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/vBJy39Fx/tkwls-6.jpg"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상제목3-->
+                        <div class="final_2container2">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">블렌더로 완성하는 3D그래픽 디자인 완결판</div>
+                                <br><br><br><br>
+                                <div class="item4">디자이너 정세윤</div>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상이미지4-->
+                        <div class="final_1container2">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/8PZdvCmV/tkwls-7.jpg"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상제목4-->
+                        <div class="final_2container2">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">손쉽게 만드는 고퀄리티 스타일라이즈풍 게임 배경</div>
+                                <br><br><br><br>
+                                <div class="item4">3D 배경 아티스트 안콜</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--미디어에 따른 변경부분-->
+                    <div class="middle_container3">
+                        <!--재원 추천영상이미지5-->
+                        <div class="middle_1container3">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/Vsr5sy13/tkwls-9.jpg"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상제목5-->
+                        <div class="middle_2container3">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">치밀한 설계에서 시작하는 브랜드디자인 실무</div>
+                                <br><br><br><br>
+                                <div class="item4">브랜드 디자이너 이태경</div>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상이미지6-->
+                        <div class="middle_1container3">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/fbPZ1L3k/tkwls-10.jpg"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상제목6-->
+                        <div class="middle_2container3">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">UX/UI 디자인 취업 포트폴리오 완성반(완결판 200강좌)</div>
+                                <br><br><br><br>
+                                <div class="item4">디자이너 셈디자인</div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="final_container3">
+                        <!--재원 추천영상이미지7-->
+                        <div class="final_1container3">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/BQ33rRv5/tkwls-11.jpg"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상제목7-->
+                        <div class="final_2container3">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">블렌더를 활용한 효율적인 3D 일러스트 제작법</div>
+                                <br><br><br><br>
+                                <div class="item4">컨셉아티스트 이인경</div>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상이미지8-->
+                        <div class="final_1container3">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/NjJwrMkb/tkwls-12.jpg"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+
+                        <!--재원 추천영상제목8-->
+                        <div class="final_2container3">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">3ds Max를 활용한 FX 실무작업 노하우 응용/심화편</div>
+                                <br><br><br><br>
+                                <div class="item4">FX 제너럴리스트 이완구</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="middle_container4">
+                        <!--재원 추천영상이미지9-->
+                        <div class="middle_1container4">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/CxNRB7xG/png-14.png"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상제목9-->
+                        <div class="middle_2container4">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">서랍 속 아이패드로 시작하는 하리의 프로크리에이트 A to Z</div>
+                                <br><br><br><br>
+                                <div class="item4">하리</div>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상이미지10-->
+                        <div class="middle_1container4">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/QN1xKm6F/png-15.png"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상제목10-->
+                        <div class="middle_2container4">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">도전! 로고 디자인 첫 걸음부터 실무, 투잡, 부업까지</div>
+                                <br><br><br><br>
+                                <div class="item4">꿈꾸는 디자인</div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="final_container4">
+                        <!--재원 추천영상이미지11-->
+                        <div class="final_1container4">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/W1b2KvsZ/png-16.png"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상제목11-->
+                        <div class="final_2container4">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">초보자를 위한 Native JavaScript UI 인터렉션 종합 클래스</div>
+                                <br><br><br><br>
+                                <div class="item4">IT백과사전
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상이미지12-->
+                        <div class="final_1container4">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/ry1MwmmW/png-17.png"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+
+                        <!--재원 추천영상제목12-->
+                        <div class="final_2container4">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">타이포그래피 마스터! 인디자인으로 완성하는 타이포그래피 심화</div>
+                                <br><br><br><br>
+                                <div class="item4">프리츠</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="final_container5">
+                        <!--재원 추천영상이미지13-->
+                        <div class="final_1container5">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/vZDJfHQ0/png-18.png"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상제목13-->
+                        <div class="final_2container5">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">유니티로 구현하는 14가지 RPG 게임 이펙트 만들기/적용하기</div>
+                                <br><br><br><br>
+                                <div class="item4">게임 이펙터 신설화</div>
+                            </div>
+
+                        </div>
+                        <!--재원 추천영상이미지14-->
+                        <div class="final_1container5">
+
+                            <div class="item_img"><a href="#"><img src="https://i.postimg.cc/5yN7Jnys/png-19.png"
+                                        class="img_size" width="600" height="350" style="border-radius: 10px;"></a>
+                            </div>
+
+                        </div>
+
+                        <!--재원 추천영상제목14-->
+                        <div class="final_2container5">
+
+                            <div class="item_font">
+                                <div class="item1">HOT</div>
+                                <div class="item2">수강가능</div>
+                                <br><br>
+                                <div class="item3">경쟁력 있는 피칭을 위한 데모곡 제작&실전 협업 노하우</div>
+                                <br><br><br><br>
+                                <div class="item4">프로듀서 네이슨</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="contents3">
+            <div class="nametag" style="color: #776B5D; ">추천색 조합</div>
+            <a href="#" class="more">더보기</a>
+            <div class="hotcolor">
+                <a href="#colors" style="margin-left: 1em; font-size: 2em; color: #776B5D; font-weight: bold;"
+                    id="colors" class="ccc">인기</a>
+                <br>
+
+                <div style="float: left;">
+                    <ul class="hotcoor_1" style="float: left; margin-top: 2em;">
+                        <button onclick="copyToClipboard('#000000'); sendm()" title="주소 복사"
+                            class="button1"><span class="snum" style="color:#000000">#000000</span></button>
+                        <button onclick="copyToClipboard('#F4DFC8'); sendm()" title="주소 복사"
+                            class="button2"><span class="snum" style="color:#F4DFC8">#F4DFC8</span></button>
+                        <button onclick="copyToClipboard('#F4EAE0'); sendm()" title="주소 복사"
+                            class="button3"><span class="snum" style="color:#F4EAE0">#F4EAE0</span></button>
+                        <button onclick="copyToClipboard('#FAF6F0'); sendm()" title="주소 복사"
+                            class="button4"><span class="snum" style="color:#FAF6F0">#FAF6F0</span></button>
+                        <div style="float: left; color: #666; font-size: 12px; position: absolute; margin-top: 15em; margin-left: 125px;"
+                            class="c1">1일 전</div>
+                        <div class="heart-btn" style="margin-top: 10.8em; left: 0.5vw;">
+                            <div class="content">
+                                <span class="heart"></span>
+                                <span class="text"></span>
+                                <span class="numb"></span>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('.content').click(function () {
+                                    $('.content').toggleClass("heart-active")
+                                    $('.text').toggleClass("heart-active")
+                                    $('.numb').toggleClass("heart-active")
+                                    $('.heart').toggleClass("heart-active")
+                                });
+                            });
+                        </script>
+                    </ul>
+                    <ul class="hotcoor_2" style="float: left; margin-top: 2em;">
+                        <button onclick="copyToClipboard('#860A35'); sendm()" title="주소 복사"
+                            class="button5"><span class="snum" style="color:#860A35">#860A35</span></button>
+                        <button onclick="copyToClipboard('#AF2655'); sendm()" title="주소 복사"
+                            class="button6"><span class="snum" style="color:#AF2655">#AF2655</span></button>
+                        <button onclick="copyToClipboard('#A3B763'); sendm()" title="주소 복사"
+                            class="button7"><span class="snum" style="color:#A3B763">#A3B763</span></button>
+                        <button onclick="copyToClipboard('#F3F3F3'); sendm()" title="주소 복사"
+                            class="button8"><span class="snum" style="color:#F3F3F3">#F3F3F3</span></button>
+                        <div style="float: left; color: #666; font-size: 12px; position: absolute; margin-top: 15em; margin-left: 125px;"
+                            class="c2">2주 전</div>
+                        <div class="heart-btn2" style="margin-top: 10.8em; left: 0.5vw;">
+                            <div class="content2">
+                                <span class="heart2"></span>
+                                <span class="text2"></span>
+                                <span class="numb2"></span>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('.content2').click(function () {
+                                    $('.content2').toggleClass("heart-active2")
+                                    $('.text2').toggleClass("heart-active2")
+                                    $('.numb2').toggleClass("heart-active2")
+                                    $('.heart2').toggleClass("heart-active2")
+                                });
+                            });
+                        </script>
+                    </ul>
+                    <ul class="hotcoor_3" style="float: left; margin-top: 2em;">
+                        <button onclick="copyToClipboard('#83A2FF'); sendm()" title="주소 복사"
+                            class="button9"><span class="snum" style="color:#83A2FF">#83A2FF</span></button>
+                        <button onclick="copyToClipboard('#B4BDFF'); sendm()" title="주소 복사"
+                            class="button10"><span class="snum" style="color:#B4BDFF">#B4BDFF</span></button>
+                        <button onclick="copyToClipboard('#FFE3BB'); sendm()" title="주소 복사"
+                            class="button11"><span class="snum" style="color:#FFE3BB">#FFE3BB</span></button>
+                        <button onclick="copyToClipboard('#FFD28F'); sendm()" title="주소 복사"
+                            class="button12"><span class="snum" style="color:#FFD28F">#FFD28F</span></button>
+                        <div style="float: left; color: #666; font-size: 12px; position: absolute; margin-top: 15em; margin-left: 125px;"
+                            class="c3">1달 전</div>
+                        <div class="heart-btn3" style="margin-top: 10.8em; left: 0.5vw;">
+                            <div class="content3">
+                                <span class="heart3"></span>
+                                <span class="text3"></span>
+                                <span class="numb3"></span>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('.content3').click(function () {
+                                    $('.content3').toggleClass("heart-active3")
+                                    $('.text3').toggleClass("heart-active3")
+                                    $('.numb3').toggleClass("heart-active3")
+                                    $('.heart3').toggleClass("heart-active3")
+                                });
+                            });
+                        </script>
+                    </ul>
+                    <ul class="hotcoor_4" style="float: left; margin-top: 2em;">
+                        <button onclick="copyToClipboard('#ECE3CE'); sendm()" title="주소 복사"
+                            class="button13"><span class="snum" style="color:#ECE3CE">#ECE3CE</span></button>
+                        <button onclick="copyToClipboard('#739072'); sendm()" title="주소 복사"
+                            class="button14"><span class="snum" style="color:#739072">#739072</span></button>
+                        <button onclick="copyToClipboard('#4F6F52'); sendm()" title="주소 복사"
+                            class="button15"><span class="snum" style="color:#4F6F52">#4F6F52</span></button>
+                        <button onclick="copyToClipboard('#3A4D39'); sendm()" title="주소 복사"
+                            class="button16"><span class="snum" style="color:#3A4D39">#3A4D39</span></button>
+                        <div style="float: left; color: #666; font-size: 12px; position: absolute; margin-top: 15em; margin-left: 125px;"
+                            class="c4">2일 전</div>
+                        <div class="heart-btn4" style="margin-top: 10.8em; left: 0.5vw;">
+                            <div class="content4">
+                                <span class="heart4"></span>
+                                <span class="text4"></span>
+                                <span class="numb4"></span>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('.content4').click(function () {
+                                    $('.content4').toggleClass("heart-active4")
+                                    $('.text4').toggleClass("heart-active4")
+                                    $('.numb4').toggleClass("heart-active4")
+                                    $('.heart4').toggleClass("heart-active4")
+                                });
+                            });
+                        </script>
+                    </ul>
+                    <ul class="hotcoor_5" style="float: left; margin-top: 2em;">
+                        <button onclick="copyToClipboard('#F875AA'); sendm()" title="주소 복사"
+                            class="button17"><span class="snum" style="color:#F875AA">#F875AA</span></button>
+                        <button onclick="copyToClipboard('#FFDFDF'); sendm()" title="주소 복사"
+                            class="button18"><span class="snum" style="color:#FFDFDF">#FFDFDF</span></button>
+                        <button onclick="copyToClipboard('#FFF6F6'); sendm()" title="주소 복사"
+                            class="button19"><span class="snum" style="color:#FFF6F6">#FFF6F6</span></button>
+                        <button onclick="copyToClipboard('#AEDEFC'); sendm()" title="주소 복사"
+                            class="button20"><span class="snum" style="color:#AEDEFC">#AEDEFC</span></button>
+                        <div style="float: left; color: #666; font-size: 12px; position: absolute; margin-top: 15em; margin-left: 125px;"
+                            class="c5">4일 전</div>
+                        <div class="heart-btn5" style="margin-top: 10.8em; left: 0.5vw;">
+                            <div class="content5">
+                                <span class="heart5"></span>
+                                <span class="text5"></span>
+                                <span class="numb5"></span>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('.content5').click(function () {
+                                    $('.content5').toggleClass("heart-active5")
+                                    $('.text5').toggleClass("heart-active5")
+                                    $('.numb5').toggleClass("heart-active5")
+                                    $('.heart5').toggleClass("heart-active5")
+                                });
+                            });
+                        </script>
+                    </ul>
+                    <ul class="hotcoor_6" style="float: left; margin-top: 2em;">
+                        <button onclick="copyToClipboard('#DADDB1'); sendm()" title="주소 복사"
+                            class="button21"><span class="snum" style="color:#DADDB1">#DADDB1</span></button>
+                        <button onclick="copyToClipboard('#B3A492'); sendm()" title="주소 복사"
+                            class="button22"><span class="snum" style="color:#B3A492">#B3A492</span></button>
+                        <button onclick="copyToClipboard('#BFB29E'); sendm()" title="주소 복사"
+                            class="button23"><span class="snum" style="color:#BFB29E">#BFB29E</span></button>
+                        <button onclick="copyToClipboard('#D6C7AE'); sendm()" title="주소 복사"
+                            class="button24"><span class="snum" style="color:#D6C7AE">#D6C7AE</span></button>
+                        <div style="float: left; color: #666; font-size: 12px; position: absolute; margin-top: 15em; margin-left: 125px;"
+                            class="c6">1주 전</div>
+                        <div class="heart-btn6" style="margin-top: 10.8em; left: 0.5vw;">
+                            <div class="content6">
+                                <span class="heart6"></span>
+                                <span class="text6"></span>
+                                <span class="numb6"></span>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('.content6').click(function () {
+                                    $('.content6').toggleClass("heart-active6")
+                                    $('.text6').toggleClass("heart-active6")
+                                    $('.numb6').toggleClass("heart-active6")
+                                    $('.heart6').toggleClass("heart-active6")
+                                });
+                            });
+                        </script>
+                    </ul>
+                    <ul class="hotcoor_7" style="float: left; margin-top: 2em;">
+                        <button onclick="copyToClipboard('#EEF5FF'); sendm()" title="주소 복사"
+                            class="button25"><span class="snum" style="color:#EEF5FF">#EEF5FF</span></button>
+                        <button onclick="copyToClipboard('#9EB8D9'); sendm()" title="주소 복사"
+                            class="button26"><span class="snum" style="color:#9EB8D9">#9EB8D9</span></button>
+                        <button onclick="copyToClipboard('#7C93C3'); sendm()" title="주소 복사"
+                            class="button27"><span class="snum" style="color:#7C93C3">#7C93C3</span></button>
+                        <button onclick="copyToClipboard('#A25772'); sendm()" title="주소 복사"
+                            class="button28"><span class="snum" style="color:#A25772">#A25772</span></button>
+                        <div style="float: left; color: #666; font-size: 12px; position: absolute; margin-top: 15em; margin-left: 125px;"
+                            class="c7">5일 전</div>
+                        <div class="heart-btn7" style="margin-top: 10.8em; left: 0.5vw;">
+                            <div class="content7">
+                                <span class="heart7"></span>
+                                <span class="text7"></span>
+                                <span class="numb7"></span>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('.content7').click(function () {
+                                    $('.content7').toggleClass("heart-active7")
+                                    $('.text7').toggleClass("heart-active7")
+                                    $('.numb7').toggleClass("heart-active7")
+                                    $('.heart7').toggleClass("heart-active7")
+                                });
+                            });
+                        </script>
+                    </ul>
+                    <ul class="hotcoor_8" style="float: left; margin-top: 2em;">
+                        <button onclick="copyToClipboard('#0766AD'); sendm()" title="주소 복사"
+                            class="button29"><span class="snum" style="color:#0766AD">#0766AD</span></button>
+                        <button onclick="copyToClipboard('#29ADB2'); sendm()" title="주소 복사"
+                            class="button30"><span class="snum" style="color:#29ADB2">#29ADB2</span></button>
+                        <button onclick="copyToClipboard('#C5E898'); sendm()" title="주소 복사"
+                            class="button31"><span class="snum" style="color:#C5E898">#C5E898</span></button>
+                        <button onclick="copyToClipboard('#F3F3F3'); sendm()" title="주소 복사"
+                            class="button32"><span class="snum" style="color:#F3F3F3">#F3F3F3</span></button>
+                        <div style="float: left; color: #666; font-size: 12px; position: absolute; margin-top: 15em; margin-left: 125px;"
+                            class="c8">1일 전</div>
+                        <div class="heart-btn8" style="margin-top: 10.8em; left: 0.5vw;">
+                            <div class="content8">
+                                <span class="heart8"></span>
+                                <span class="text8"></span>
+                                <span class="numb8"></span>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('.content8').click(function () {
+                                    $('.content8').toggleClass("heart-active8")
+                                    $('.text8').toggleClass("heart-active8")
+                                    $('.numb8').toggleClass("heart-active8")
+                                    $('.heart8').toggleClass("heart-active8")
+                                });
+                            });
+                        </script>
+                    </ul>
+                    <ul class="hotcoor_9" style="float: left; margin-top: 2em;">
+                        <button onclick="copyToClipboard('#7071E8'); sendm()" title="주소 복사"
+                            class="button33"><span class="snum" style="color:#7071E8">#7071E8</span></button>
+                        <button onclick="copyToClipboard('#C683D7'); sendm()" title="주소 복사"
+                            class="button34"><span class="snum" style="color:#C683D7">#C683D7</span></button>
+                        <button onclick="copyToClipboard('#ED9ED6'); sendm()" title="주소 복사"
+                            class="button35"><span class="snum" style="color:#ED9ED6">#ED9ED6</span></button>
+                        <button onclick="copyToClipboard('#FFC7C7'); sendm()" title="주소 복사"
+                            class="button36"><span class="snum" style="color:#FFC7C7">#FFC7C7</span></button>
+                        <div style="float: left; color: #666; font-size: 12px; position: absolute; margin-top: 15em; margin-left: 125px;"
+                            class="c9">1일 전</div>
+                        <div class="heart-btn9" style="margin-top: 10.8em; left: 0.5vw;">
+                            <div class="content9">
+                                <span class="heart9"></span>
+                                <span class="text9"></span>
+                                <span class="numb9"></span>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('.content9').click(function () {
+                                    $('.content9').toggleClass("heart-active9")
+                                    $('.text9').toggleClass("heart-active9")
+                                    $('.numb9').toggleClass("heart-active9")
+                                    $('.heart9').toggleClass("heart-active9")
+                                });
+                            });
+                        </script>
+                    </ul>
+                    <ul class="hotcoor_10" style="float: left; margin-top: 2em;">
+                        <button onclick="copyToClipboard('#FF8F8F'); sendm()" title="주소 복사"
+                            class="button37"><span class="snum" style="color:#FF8F8F">#FF8F8F</span></button>
+                        <button onclick="copyToClipboard('#EEF296'); sendm()" title="주소 복사"
+                            class="button38"><span class="snum" style="color:#EEF296">#EEF296</span></button>
+                        <button onclick="copyToClipboard('#9ADE7B'); sendm()" title="주소 복사"
+                            class="button39"><span class="snum" style="color:#9ADE7B">#9ADE7B</span></button>
+                        <button onclick="copyToClipboard('#508D69'); sendm()" title="주소 복사"
+                            class="button40"><span class="snum" style="color:#508D69">#508D69</span></button>
+                        <div style="float: left; color: #666; font-size: 12px; position: absolute; margin-top: 15em; margin-left: 125px;"
+                            class="c10">1일 전</div>
+                        <div class="heart-btn10" style="margin-top: 10.8em; left: 0.5vw;">
+                            <div class="content10">
+                                <span class="heart10"></span>
+                                <span class="text10"></span>
+                                <span class="numb10"></span>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('.content10').click(function () {
+                                    $('.content10').toggleClass("heart-active10")
+                                    $('.text10').toggleClass("heart-active10")
+                                    $('.numb10').toggleClass("heart-active10")
+                                    $('.heart10').toggleClass("heart-active10")
+                                });
+                            });
+                        </script>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container_warpper">
+                <div class="all_container">
+                    <div class="first_container">
+                        <div class="main_container">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="https://i.postimg.cc/qqH5Yxmn/png-4.png" width="125px" height="50px">
+                                </a>
+                            </div>
+                            <div class="footer_text">
+                                <div class="title_text">
+                                    <a href="#">
+                                        <span>도움말</span>
+                                    </a>
+                                </div>
+                                <div class="title_text">
+                                    <a href="#">
+                                        <span>공지사항</span>
+                                    </a>
+                                </div>
+                                <div class="title_text">
+                                    <a href="#">
+                                        <span>이용약관</span>
+                                    </a>
+                                </div>
+                                <div class="title_text">
+                                    <a href="#">
+                                        <span>개인정보취급방침</span>
+                                    </a>
+                                </div>
+                                <div class="title_text">
+                                    <a href="#">
+                                        <span>고객센터</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second_container">
+                        <div class="footer_logo_container">
+                            <div class="icon_button">
+                                <a href="#">
+                                    <img src="https://i.postimg.cc/PfcGb1zt/png-2.png" width="20px" height="20px">
+                                </a>
+                            </div>
+                            <div class="icon_button">
+                                <a href="#">
+                                    <img src="https://i.postimg.cc/VLcxHmTT/png-3.png" width="20px" height="20px">
+                                </a>
+                            </div>
+                            <div class="icon_button">
+                                <a href="#">
+                                    <img src="https://i.postimg.cc/zB7zXv9y/png-1.png" width="20px" height="20px">
+                                </a>
+                            </div>
+                            <div class="icon_button">
+                                <a href="#">
+                                    <img src="https://i.postimg.cc/DztjJc3D/png-5.png" width="20px" height="20px">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="second_second_container">
+                            <div class="email">
+                                <span>
+                                    E : contact@editplace.kr
+                                </span>
+                            </div>
+                            <div class="term_privacy_container">
+                                <span>
+                                    제공되는 콘텐츠와 이벤트에 대한 전반적인 책임은 상점 운영자와 이벤트를 진행하는 주체에 있습니다.
+                                    상점과 이벤트 참여에 관련된 편리하고 공정한 온라인 솔루션을 제공할 수 있도록 항상 최선을 다하겠습니다.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
